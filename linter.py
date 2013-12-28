@@ -10,31 +10,15 @@
 
 """This module exports the Rubocop plugin class."""
 
-import os
-from SublimeLinter.lint import RubyLinter, util
+from SublimeLinter.lint import Linter
 
 
-class Rubocop(RubyLinter):
+class Rubocop(Linter):
 
     """Provides an interface to rubocop."""
 
     syntax = 'ruby'
-    executable = 'rubocop@ruby'
+    cmd = 'rubocop --format emacs *'
     regex = r'^.+?:(?P<line>\d+):(?P<col>\d+): .+?: (?P<message>.+)'
     tempfile_suffix = 'rb'
-
-    def cmd(self):
-        """
-        Return the command line to be run.
-
-        We define this to find a .rubocop.yml file.
-
-        """
-
-        command = self.executable_path + ['--format', 'emacs']
-        config = util.find_file(os.path.dirname(self.filename), '.rubocop.yml')
-
-        if config:
-            command += ['--config', config]
-
-        return command
+    config_file = ('--config', '.rubocop.yml')
