@@ -18,7 +18,7 @@ class Rubocop(Linter):
     """Provides an interface to rubocop."""
 
     syntax = 'ruby'
-    cmd = 'rubocop --format emacs *'
+    cmd = 'rubocop --format emacs'
     regex = r'^.+?:(?P<line>\d+):(?P<col>\d+): .+?: (?P<message>.+)'
     tempfile_suffix = 'rb'
     config_file = ('--config', '.rubocop.yml')
