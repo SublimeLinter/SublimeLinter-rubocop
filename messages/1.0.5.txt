@@ -1,0 +1,3 @@
+SublimeLinter-rubocop 1.0.5
+----------------------------
+- Added 'ruby on rails' to syntax.
