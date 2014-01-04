@@ -17,8 +17,9 @@ class Rubocop(Linter):
 
     """Provides an interface to rubocop."""
 
-    syntax = ('ruby', 'ruby on rails', 'rspec')
+    syntax = ('ruby', 'ruby on rails', 'rspec', 'html (rails)')
     cmd = 'rubocop --format emacs'
     regex = r'^.+?:(?P<line>\d+):(?P<col>\d+): .+?: (?P<message>.+)'
+    selectors = {'html (rails)': 'source.ruby.rails.embedded.html'}
     tempfile_suffix = 'rb'
     config_file = ('--config', '.rubocop.yml')
