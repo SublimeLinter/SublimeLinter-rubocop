@@ -1,0 +1,4 @@
+SublimeLinter-rubocop 1.0.8
+----------------------------
+- refactor, convention, and warning messages are highlighted
+  as warnings, error and fatal messages as errors.
