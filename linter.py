@@ -19,6 +19,9 @@ class Rubocop(Linter):
 
     syntax = ('ruby', 'ruby on rails', 'rspec')
     cmd = 'rubocop --format emacs'
+    version_args = '--version'
+    version_re = r'(?P<version>\d+\.\d+\.\d+)'
+    version_requirement = '>= 0.15.0'
     regex = (
         r'^.+?:(?P<line>\d+):(?P<col>\d+): '
         r'(:?(?P<warning>[RCW])|(?P<error>[EF])): '

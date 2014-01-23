@@ -18,6 +18,8 @@ Before using this plugin, you must ensure that `rubocop` is installed on your sy
 
 1. If you are using `rvm` or `rbenv`, ensure that they are loaded in your shell’s correct startup file. See [here](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#shell-startup-files) for more information.
 
+**Note:** This plugin requires `rubocop` 0.15.0 or later.
+
 ### Linter configuration
 In order for `rubocop` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. Before going any further, please read and follow the steps in [“Finding a linter executable”](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable) through “Validating your PATH” in the documentation.
 
