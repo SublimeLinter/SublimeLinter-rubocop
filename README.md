@@ -1,6 +1,8 @@
 SublimeLinter-rubocop
 =========================
 
+[![Build Status](https://khancdn.eu/badges.php?service=https%3A%2F%2Ftravis-ci.org%2FSublimeLinter%2FSublimeLinter-rubocop.png%3Fbranch%3Dmaster)](https://travis-ci.org/SublimeLinter/SublimeLinter-rubocop)
+
 This linter plugin for [SublimeLinter](http://sublimelinter.readthedocs.org) provides an interface to [rubocop](https://github.com/bbatsov/rubocop). It will be used with files that have the “Ruby” syntax.
 
 ## Installation
