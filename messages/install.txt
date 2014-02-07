@@ -7,4 +7,4 @@ This linter plugin for SublimeLinter provides an interface to rubocop.
 Before this plugin will activate, you *must*
 follow the installation instructions here:
 
-https://github.com/Aparajita/SublimeLinter-rubocop
+https://github.com/SublimeLinter/SublimeLinter-rubocop
