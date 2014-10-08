@@ -18,7 +18,7 @@ class Rubocop(Linter):
     """Provides an interface to rubocop."""
 
     syntax = ('ruby', 'ruby on rails', 'rspec')
-    cmd = 'rubocop --format emacs'
+    cmd = 'bundle exec rubocop --format emacs'
     version_args = '--version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
     version_requirement = '>= 0.15.0'
