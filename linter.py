@@ -10,15 +10,15 @@
 
 """This module exports the Rubocop plugin class."""
 
-from SublimeLinter.lint import Linter
+from SublimeLinter.lint import RubyLinter
 
 
-class Rubocop(Linter):
+class Rubocop(RubyLinter):
 
     """Provides an interface to rubocop."""
 
     syntax = ('ruby', 'ruby on rails', 'rspec')
-    cmd = 'rubocop --format emacs'
+    cmd = 'rubocop@ruby --format emacs'
     version_args = '--version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
     version_requirement = '>= 0.15.0'
