@@ -1,0 +1,3 @@
+SublimeLinter-rubocop 1.0.9
+----------------------------
+- Use RubyLinter to help find the ruby we should be running. Should work on wider variety of ruby setups.
