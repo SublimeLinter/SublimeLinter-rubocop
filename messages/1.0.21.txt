@@ -1,0 +1,4 @@
+SublimeLinter-rubocop 1.0.21
+----------------------------
+- Fix the version check string
+- bump the version to match what we're reporting to Package Control

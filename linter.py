@@ -3,6 +3,7 @@
 # Linter for SublimeLinter3, a code checking framework for Sublime Text 3
 #
 # Written by Aparajita Fishman
+# Contributors: Francis Gulotta, Josh Hagins
 # Copyright (c) 2013 Aparajita Fishman
 #
 # License: MIT
