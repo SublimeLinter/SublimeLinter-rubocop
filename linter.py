@@ -19,7 +19,7 @@ class Rubocop(RubyLinter):
 
     syntax = ('ruby', 'ruby on rails', 'rspec')
     cmd = 'ruby -S rubocop --format emacs'
-    version_args = '--version'
+    version_args = '-S rubocop --version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
     version_requirement = '>= 0.15.0'
     regex = (
