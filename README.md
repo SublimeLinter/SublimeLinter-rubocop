@@ -3,7 +3,7 @@ SublimeLinter-rubocop
 
 [![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-rubocop.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-rubocop)
 
-This linter plugin for [SublimeLinter](http://sublimelinter.readthedocs.org) provides an interface to [rubocop](https://github.com/bbatsov/rubocop). It will be used with files that have the “Ruby” syntax.
+This linter plugin for [SublimeLinter](http://sublimelinter.readthedocs.org) provides an interface to [rubocop](https://github.com/bbatsov/rubocop). It will be used with files that have the `ruby`, `ruby on rails`, `rspec`, `betterruby` or `ruby experimental` syntaxes.
 
 ## Installation
 SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here](http://sublimelinter.readthedocs.org/en/latest/installation.html).
