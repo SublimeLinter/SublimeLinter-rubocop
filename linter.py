@@ -18,7 +18,7 @@ class Rubocop(RubyLinter):
 
     """Provides an interface to rubocop."""
 
-    syntax = ('ruby', 'ruby on rails', 'rspec', 'betterruby', 'ruby experimental')
+    syntax = ('ruby', 'ruby on rails', 'rspec', 'betterruby', 'ruby experimental', 'cucumber steps')
     cmd = 'ruby -S rubocop --format emacs'
     version_args = '-S rubocop --version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
