@@ -7,6 +7,6 @@ install:
   - pip install pep257
 # command to run tests
 script:
-  - flake8 . --max-line-length=120
-  - pep257 . --ignore=D202
+  - flake8 .
+  - pep257 .
 sudo: false

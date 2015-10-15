@@ -15,10 +15,17 @@ from SublimeLinter.lint import RubyLinter
 
 
 class Rubocop(RubyLinter):
-
     """Provides an interface to rubocop."""
 
-    syntax = ('ruby', 'ruby on rails', 'rspec', 'betterruby', 'ruby experimental', 'cucumber steps')
+    syntax = (
+        'better rspec',
+        'betterruby',
+        'cucumber steps',
+        'rspec',
+        'ruby experimental',
+        'ruby on rails',
+        'ruby'
+    )
     cmd = 'ruby -S rubocop --format emacs'
     version_args = '-S rubocop --version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
