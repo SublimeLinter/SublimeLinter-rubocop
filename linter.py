@@ -35,5 +35,5 @@ class Rubocop(RubyLinter):
         r'(:?(?P<warning>[RCW])|(?P<error>[EF])): '
         r'(?P<message>.+)'
     )
-    tempfile_suffix = 'rb'
+    tempfile_suffix = '-'
     config_file = ('--config', '.rubocop.yml')
