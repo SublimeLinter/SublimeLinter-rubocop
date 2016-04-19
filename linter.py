@@ -39,6 +39,8 @@ class Rubocop(RubyLinter):
     )
 
     def cmd(self):
+        """Build command, using STDIN if a file path can be determined."""
+
         command = ['ruby', '-S', 'rubocop', '--format', 'emacs']
 
         # Set tempfile_suffix so by default a tempfile is passed onto rubocop:
