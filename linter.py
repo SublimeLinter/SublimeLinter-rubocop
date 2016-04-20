@@ -40,7 +40,6 @@ class Rubocop(RubyLinter):
 
     def cmd(self):
         """Build command, using STDIN if a file path can be determined."""
-
         command = ['ruby', '-S', 'rubocop', '--format', 'emacs']
 
         # Set tempfile_suffix so by default a tempfile is passed onto rubocop:
@@ -64,8 +63,8 @@ class Rubocop(RubyLinter):
 
         if path:
             # With this path we can instead pass the file contents in via STDIN
-            # and then tell rubocop to use this path (to search for config files
-            # and to use for matching against configured paths - i.e. for
+            # and then tell rubocop to use this path (to search for config
+            # files and to use for matching against configured paths - i.e. for
             # inheritance, inclusions and exclusions):
             command += ['--stdin', path]
             # Ensure the files contents are passed in via STDIN:
