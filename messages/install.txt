@@ -7,4 +7,19 @@ This linter plugin for SublimeLinter provides an interface to rubocop.
 Before this plugin will activate, you *must*
 follow the installation instructions here:
 
-https://github.com/SublimeLinter/SublimeLinter-rubocop
+The full version of the doc can be found here https://github.com/SublimeLinter/SublimeLinter-rubocop
+
+Linter installation
+-------------------------------
+Before using this plugin, you must ensure that `rubocop` is installed on your system. To install `rubocop`, do the following:
+
+1. Install [Ruby](http://ruby-lang.org).
+
+2. Install `rubocop` by typing the following in a terminal:
+   ```
+   [sudo] gem install rubocop
+   ```
+
+3. If you are using `rvm` or `rbenv`, ensure that they are loaded in your shell’s correct startup file. See http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#shell-startup-files for more information.
+
+**Note:** This plugin requires `rubocop` 0.34.0 or later.

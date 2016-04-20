@@ -1,0 +1,4 @@
+SublimeLinter-rubocop 2.0.0
+----------------------------
+- Support File location specific Rubocop rules thanks to Mark Haylock @mhaylock
+- Major version bump because it requires a much newer version of rubocop
