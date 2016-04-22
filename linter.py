@@ -65,8 +65,11 @@ class Rubocop(RubyLinter):
             # With this path we can instead pass the file contents in via STDIN
             # and then tell rubocop to use this path (to search for config
             # files and to use for matching against configured paths - i.e. for
-            # inheritance, inclusions and exclusions):
-            command += ['--stdin', path]
+            # inheritance, inclusions and exclusions).
+            #
+            # The 'force-exclusion' overrides rubocop's behavior of ignoring
+            # global excludes when the file path is explicitly provided:
+            command += ['--force-exclusion', '--stdin', path]
             # Ensure the files contents are passed in via STDIN:
             self.tempfile_suffix = None
 
