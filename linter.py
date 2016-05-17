@@ -4,7 +4,8 @@
 #
 # Written by Aparajita Fishman
 # Contributors: Francis Gulotta, Josh Hagins, Mark Haylock
-# Copyright (c) 2013 Aparajita Fishman
+# Copyright (c) 2015-2016 The SublimeLinter Community
+# Copyright (c) 2013-2014 Aparajita Fishman
 #
 # License: MIT
 #
