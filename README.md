@@ -41,7 +41,7 @@ For general information on how SublimeLinter works with settings, please see [Se
 
 You can configure rubocop exactly the way you would from the command line, using `.rubocop.yml` configuration files. For more information, see the [rubocop documentation](https://github.com/bbatsov/rubocop#configuration).
 
-By default, the linter plugin looks for a config file called `.rubocop.yml` in the current directory and its parents. To override the config file path, you would add this to the linter settings:
+By default, the linter plugin looks for a config file called `.rubocop.yml` in the current directory and its parents. To override the config file path, you would add this to the Sublime Linter User Settings (found in `Menu->Preferences->Package Settings->SublimeLinter->Settings - User`):
 
 ```json
 "rubocop": {
