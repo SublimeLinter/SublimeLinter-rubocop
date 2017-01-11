@@ -18,7 +18,7 @@ Before using this plugin, you must ensure that `rubocop` is installed on your sy
    [sudo] gem install rubocop
    ```
 
-1. If you are using `rvm` or `rbenv`, ensure that they are loaded in your shell’s correct startup file. See [here](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#shell-startup-files) for more information.
+1. If you are using `rvm` or `rbenv`, ensure that they are loaded in your shell’s correct startup file. See [here](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#adjusting-shell-startup-files) for more information.
 
 **Note:** This plugin requires `rubocop` 0.34.0 or later.
 
