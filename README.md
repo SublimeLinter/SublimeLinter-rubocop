@@ -49,6 +49,14 @@ By default, the linter plugin looks for a config file called `.rubocop.yml` in t
 }
 ```
 
+If you are using Bundler and would like to use the locked rubocop version (which will also allow you to use `inherit_gem` in `rubocop.yml`, in case you are inheriting from another gem in the project), you must set `use_bundle_exec` to true:
+
+```json
+"rubocop": {
+    "use_bundle_exec": true
+}
+```
+
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
 
