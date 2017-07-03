@@ -1,0 +1,4 @@
+SublimeLinter-rubocop 2.0.1
+----------------------------
+- add new config option `use_bundle_exec` @smanolloff
+- I'm looking for a new maintainer. The maintenance cost has been pretty low but I'm no longer using sublime or ruby in a day to day capacity. If you're interested speak up! https://github.com/SublimeLinter/SublimeLinter-rubocop/issues/38
