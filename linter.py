@@ -43,7 +43,7 @@ class Rubocop(RubyLinter):
         """Build command, using STDIN if a file path can be determined."""
 
         settings = self.get_view_settings()
-        command = ['ruby', '-S']
+        command = [self.executable_path or 'ruby', '-S']
 
         if settings.get('use_bundle_exec', False):
             command.extend(['bundle', 'exec'])
