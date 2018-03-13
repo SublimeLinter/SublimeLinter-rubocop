@@ -37,6 +37,7 @@ To override the config file path, you would add this to the Sublime Linter User 
 }
 ```
 
+### Bundler
 If you are using Bundler and would like to use the locked rubocop version (which will also allow you to use `inherit_gem` in `rubocop.yml`, in case you are inheriting from another gem in the project), you must set `use_bundle_exec` to true:
 
 ```json
