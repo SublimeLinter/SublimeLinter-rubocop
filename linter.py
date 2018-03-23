@@ -29,7 +29,6 @@ class Rubocop(RubyLinter):
         'ruby'
     )
     cmd = None
-    executable = 'ruby'
     version_args = '-S rubocop --version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
     version_requirement = '>= 0.34.0'
@@ -45,8 +44,6 @@ class Rubocop(RubyLinter):
         settings = self.get_view_settings()
 
         command = ['ruby', '-S']
-        if self.executable_path:
-            command = self.executable_path + ['-S']
 
         if settings.get('use_bundle_exec', False):
             command.extend(['bundle', 'exec'])
