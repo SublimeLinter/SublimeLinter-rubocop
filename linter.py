@@ -1,24 +1,8 @@
-#
-# linter.py
-# Linter for SublimeLinter3, a code checking framework for Sublime Text 3
-#
-# Written by Aparajita Fishman
-# Contributors: Francis Gulotta, Josh Hagins, Mark Haylock
-# Copyright (c) 2015-2016 The SublimeLinter Community
-# Copyright (c) 2013-2014 Aparajita Fishman
-#
-# License: MIT
-#
-
-"""This module exports the Rubocop plugin class."""
-
 import os
 from SublimeLinter.lint import RubyLinter
 
 
 class Rubocop(RubyLinter):
-    """Provides an interface to rubocop."""
-
     syntax = (
         'better rspec',
         'betterruby',
@@ -29,9 +13,6 @@ class Rubocop(RubyLinter):
         'ruby'
     )
     cmd = None
-    version_args = '-S rubocop --version'
-    version_re = r'(?P<version>\d+\.\d+\.\d+)'
-    version_requirement = '>= 0.34.0'
     regex = (
         r'^.+?:(?P<line>\d+):(?P<col>\d+): '
         r'(:?(?P<warning>[RCW])|(?P<error>[EF])): '
