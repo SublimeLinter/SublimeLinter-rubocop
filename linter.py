@@ -12,7 +12,6 @@ class Rubocop(RubyLinter):
         'ruby on rails',
         'ruby'
     )
-    cmd = None
     regex = (
         r'^.+?:(?P<line>\d+):(?P<col>\d+): '
         r'(:?(?P<warning>[RCW])|(?P<error>[EF])): '
