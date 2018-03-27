@@ -14,7 +14,7 @@ class RubyLinter(Linter):
         if settings.get('use_bundle_exec', False):
             return True, ['bundle', 'exec', gem_name]
 
-        return True, [gem_name, ]  # Avoid testing if `gem_name` is on PATH
+        return True, gem_name  # Avoid testing if `gem_name` is on PATH
 
 
 class Rubocop(RubyLinter):
