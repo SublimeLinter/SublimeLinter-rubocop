@@ -32,8 +32,12 @@ You can configure rubocop exactly the way you would from the command line, using
 To override the config file path, you would add this to the Sublime Linter User Settings:
 
 ```json
-"rubocop": {
-    "args": ["--config", "path/to/config.yml"]
+{ 
+    "linters": {
+        "rubocop": {
+            "args": ["--config", "path/to/config.yml"]
+        }
+    }
 }
 ```
 
@@ -41,7 +45,11 @@ To override the config file path, you would add this to the Sublime Linter User 
 If you are using Bundler and would like to use the locked rubocop version (which will also allow you to use `inherit_gem` in `rubocop.yml`, in case you are inheriting from another gem in the project), you must set `use_bundle_exec` to true:
 
 ```json
-"rubocop": {
-    "use_bundle_exec": true
+{ 
+    "linters": {
+        "rubocop": {
+            "use_bundle_exec": true
+        }
+    }
 }
 ```
