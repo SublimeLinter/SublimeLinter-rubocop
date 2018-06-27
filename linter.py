@@ -3,15 +3,9 @@ from SublimeLinter.lint import RubyLinter
 
 
 class Rubocop(RubyLinter):
-    syntax = (
-        'better rspec',
-        'betterruby',
-        'cucumber steps',
-        'rspec',
-        'ruby experimental',
-        'ruby on rails',
-        'ruby'
-    )
+    defaults = {
+        'selector': 'source.ruby'
+    }
     regex = (
         r'^.+?:(?P<line>\d+):(?P<col>\d+): '
         r'(:?(?P<warning>[RCW])|(?P<error>[EF])): '
