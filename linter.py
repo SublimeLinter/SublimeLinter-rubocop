@@ -4,7 +4,7 @@ from SublimeLinter.lint import RubyLinter
 
 class Rubocop(RubyLinter):
     defaults = {
-        'selector': 'source.ruby'
+        'selector': 'source.ruby - text.html'
     }
     regex = (
         r'^.+?:(?P<line>\d+):(?P<col>\d+): '
