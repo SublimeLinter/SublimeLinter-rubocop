@@ -1,8 +1,8 @@
 import os
-from SublimeLinter.lint import RubyLinter
+from SublimeLinter.lint import Linter
 
 
-class Rubocop(RubyLinter):
+class Rubocop(Linter):
     defaults = {
         'selector': 'source.ruby - text.html - text.haml'
     }
@@ -17,7 +17,7 @@ class Rubocop(RubyLinter):
 
         settings = self.get_view_settings()
 
-        command = ['ruby', '-S']
+        command = []
 
         if settings.get('use_bundle_exec', False):
             command.extend(['bundle', 'exec'])
