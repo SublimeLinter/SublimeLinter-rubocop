@@ -2,7 +2,27 @@ import os
 from SublimeLinter.lint import Linter
 
 
-class Rubocop(Linter):
+class RubyLinter(Linter):
+    def context_sensitive_executable_path(self, cmd):
+        # The default implementation will look for a user defined `executable`
+        # setting.
+        success, executable = super().context_sensitive_executable_path(cmd)
+        if success:
+            return True, executable
+
+        gem_name = cmd[0] if isinstance(cmd, list) else cmd
+
+        if self.settings.get('use_bundle_exec', False):
+            return True, ['bundle', 'exec', gem_name]
+
+        rvm = self.which('rvm-auto-ruby')
+        if rvm:
+            return True, [rvm, '-S', gem_name]
+
+        return False, None
+
+
+class Rubocop(RubyLinter):
     defaults = {
         'selector': 'source.ruby - text.html - text.haml'
     }
@@ -15,17 +35,7 @@ class Rubocop(Linter):
     def cmd(self):
         """Build command, using STDIN if a file path can be determined."""
 
-        settings = self.get_view_settings()
-
-        command = []
-
-        if settings.get('use_bundle_exec', False):
-            command.extend(['bundle', 'exec'])
-
-        command.extend(['rubocop', '--format', 'emacs'])
-
-        # Set tempfile_suffix so by default a tempfile is passed onto rubocop:
-        self.tempfile_suffix = 'rb'
+        command = ['rubocop', '--format', 'emacs']
 
         path = self.filename
         if not path:
@@ -54,5 +64,8 @@ class Rubocop(Linter):
             command += ['--force-exclusion', '--stdin', path]
             # Ensure the files contents are passed in via STDIN:
             self.tempfile_suffix = None
+        else:
+            self.tempfile_suffix = 'rb'
+            command += ['${temp_file}']
 
         return command
