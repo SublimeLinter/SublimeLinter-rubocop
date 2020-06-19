@@ -2,6 +2,7 @@ import os
 import os.path
 from SublimeLinter.lint import Linter
 
+
 class RubyLinter(Linter):
     def context_sensitive_executable_path(self, cmd):
         # The default implementation will look for a user defined `executable`
@@ -85,8 +86,7 @@ class Rubocop(RubyLinter):
             return file_path
 
         parent_path = os.path.abspath(os.path.join(path, os.pardir))
-        if parent_path == path: # we have reached the root without success
+        if parent_path == path:  # we have reached the root without success
             return None
 
         self._find_file_in_parents(parent_path, filename)
-
