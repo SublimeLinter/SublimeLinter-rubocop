@@ -1,6 +1,6 @@
 import os
+import os.path
 from SublimeLinter.lint import Linter
-
 
 class RubyLinter(Linter):
     def context_sensitive_executable_path(self, cmd):
@@ -54,6 +54,15 @@ class Rubocop(RubyLinter):
                 path = os.path.join(folders[0], 'untitled.rb')
 
         if path:
+            # Since we are using the STDIN to pipe the contents of the editor in
+            # rubocop can not infer the path of the .rubocopo.yml within the
+            # current project. It falls back to the user's default (in home dir).
+            # see:
+            #   https://docs.rubocop.org/rubocop/configuration.html#config-file-locations
+            config_file = self._find_file_in_parents(os.path.dirname(path), '.rubocop.yml')
+            if config_file:
+                command += ['--config', config_file]
+
             # With this path we can instead pass the file contents in via STDIN
             # and then tell rubocop to use this path (to search for config
             # files and to use for matching against configured paths - i.e. for
@@ -69,3 +78,15 @@ class Rubocop(RubyLinter):
             command += ['${temp_file}']
 
         return command
+
+    def _find_file_in_parents(self, path, filename):
+        file_path = os.path.join(path, filename)
+        if os.path.exists(file_path):
+            return file_path
+
+        parent_path = os.path.abspath(os.path.join(path, os.pardir))
+        if parent_path == path: # we have reached the root without success
+            return None
+
+        self._find_file_in_parents(parent_path, filename)
+
