@@ -89,4 +89,4 @@ class Rubocop(RubyLinter):
         if parent_path == path:  # we have reached the root without success
             return None
 
-        self._find_file_in_parents(parent_path, filename)
+        return self._find_file_in_parents(parent_path, filename)
