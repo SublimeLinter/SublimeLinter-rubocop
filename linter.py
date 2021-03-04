@@ -29,13 +29,15 @@ class Rubocop(RubyLinter):
     regex = (
         r'^.+?:(?P<line>\d+):(?P<col>\d+): '
         r'(:?(?P<warning>[RCW])|(?P<error>[EF])): '
-        r'(?P<message>.+)'
+        r'(?P<fixable>\[Correctable\] )?'
+        r'((?P<code>\w+/\w+): )?'
+        r'(?P<message>.+)$'
     )
 
     def cmd(self):
         """Build command, using STDIN if a file path can be determined."""
 
-        command = ['rubocop', '--format', 'emacs']
+        command = ['rubocop', '--format', 'emacs', '--display-cop-names']
 
         path = self.filename
         if not path:
