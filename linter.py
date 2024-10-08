@@ -33,7 +33,7 @@ class Rubocop(RubyLinter):
         r'((?P<code>\w+/\w+): )?'
         r'(?P<message>.+)$'
     )
-    word_re = r'^((@|@@|\$)?[-\w]+[!?]?)'
+    word_re = r'^((@|@@|\$)?\w+[!?]?)'
 
     def cmd(self):
         """Build command, using STDIN if a file path can be determined."""
