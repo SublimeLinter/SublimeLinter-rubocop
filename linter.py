@@ -3,6 +3,8 @@ from SublimeLinter.lint import Linter
 
 
 class RubyLinter(Linter):
+    __abstract__ = True
+    
     def context_sensitive_executable_path(self, cmd):
         # The default implementation will look for a user defined `executable`
         # setting.
